@@ -4,11 +4,13 @@ public class Main {
         BurningLove burningLove = new BurningLove(17, 500, BeerKindsEnum.LAGER, 100);
         BurningLove burningLove1 = new BurningLove(25, 2000, BeerKindsEnum.HYBRID, 200);
 
-        beer.printInfo();
-        beer.drink();
-        burningLove.printInfo();
-        burningLove.drink();
-        burningLove1.printInfo();
-        burningLove.drink();
+        Beer[] beers = {beer, burningLove, burningLove1};
+
+        for (int i = 0; i < beers.length; i++) {
+            beers[i].printInfo();
+            beers[i].drink();
+            System.out.println();
+        }
+
     }
 }
